@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+  {%- for post in collections.navTree -%}
+    <li class="{% if post.link === page.url %}active{% endif %}">
+      <a href="{{ post.link }}">{{ post.text }}</a>
+      {% if post.child %}
+      {%- for cpost in post.child -%}
+        <ul>
+          <li class="{% if cpost.link === page.url %}active{% endif %}">
+            <a href="{{ cpost.link }}">&raquo; {{ cpost.text }}</a>
+          </li>
+        </ul>
+      {%- endfor -%}
+      {% endif %}
+    </li>
+  {%- endfor -%}
+  </ul>
+</nav>
