@@ -2,7 +2,7 @@
   <ul>
     {%- for post in collections.all -%}
       <li class="{% if post.url === page.url %}active{% endif %}">
-        <a href="{{ post.url }}">{{ post.url | toTitle }}</a>
+        <a href="{{ post.url | url }}">{{ post.url | toTitle }}</a>
       </li>
     {%- endfor -%}
   </ul>

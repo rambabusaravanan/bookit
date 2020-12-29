@@ -1,1 +1,1 @@
-rm -r bookit.zip bookit-master _data _includes assets .eleventy.js .gitignore
+rm -vr _data _includes assets .eleventy.js clean.sh pull.sh
